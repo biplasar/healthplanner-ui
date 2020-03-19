@@ -8,12 +8,12 @@ import { Table } from './Table';
   styles: []
 })
 export class TableComponent implements OnInit {
-  //newcomponent = "Entered in new tablecomponent created";	
+  
   patients: Table[];
   constructor(private tservice: TableService) {}
   ngOnInit() {
     this.tservice.getData().subscribe(
-      data => {
+      (data : any) => {
           //alert(JSON.stringify(data));
           this.patients = data.patients;
     });
