@@ -19,7 +19,7 @@ import { ErrorComponent } from './error/error.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserComponent } from './user/user.component';
 import { SharedService } from './shared.service';
-
+import { SidenavListComponent } from './sidenav-list/sidenav-list.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { SharedService } from './shared.service';
     LayoutComponent,
     LoginComponent,
     ErrorComponent,
-    UserComponent
+    UserComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,

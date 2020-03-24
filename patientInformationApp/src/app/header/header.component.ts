@@ -12,6 +12,7 @@ import { SharedService } from '../shared.service';
 export class HeaderComponent implements OnInit {
 
   logedUser: User = null;
+  @Output() public sidenavToggle = new EventEmitter();
 
   constructor(
     private _sharedService: SharedService,
@@ -25,4 +26,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
+  }
+  
 }
