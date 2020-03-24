@@ -1,9 +1,25 @@
-<section fxLayout="column" fxFlexAlign="stretch">
-        <div fxFlexAlign="center">
-          <p>Welcome to the Patient Information Application</p>
-        </div>
-      
-        <p>In this application we are going to Register new patients and view the details of the registered patients</p>
+<div fxLayout="column" fxFlexFill >
+    <mat-card>
+      <mat-card-title>Welcome to the Patient Information Application</mat-card-title>
+      <mat-card-content>
+          <p>In this application we are going to Register new patients and view the details of the registered patients.</p>
+          <p>Click on 'Register' to add/create a new Patient. Click on 'Patients' to get the list of available Patients.</p>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="center">
+          <button mat-raised-button color="primary" >Register</button>
+          <button mat-raised-button color="primary"routerLink="/table">Patients</button>
+      </mat-card-actions>
+    </mat-card>
+    <!--
+    <div fxFlexAlign="center" >
+      <p>Welcome to the Patient Information Application</p>
+    </div>
+    <div fxLayout="column" fxFlexAlign="right center">
+      <p>In this application we are going to Register new patients and view the details of the registered patients</p>
+      <p>Click the below button to Register a new Patient</p>
+      <button mat-raised-button color="primary" fxLayoutAlign="center">Register</button>
+    </div>
+    -->
         <!--
         <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
           <mat-tab label="Material Components"> 
@@ -17,4 +33,6 @@
             </mat-tab>
         </mat-tab-group>
         -->
-</section>
+        
+        
+      </div>

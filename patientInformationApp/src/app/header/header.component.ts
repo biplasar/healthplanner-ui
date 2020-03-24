@@ -1,4 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, AfterViewChecked, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { User } from '../login/user';
+import { LoginComponent } from '../login/login.component';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +11,18 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() public sidenavToggle = new EventEmitter();
-  constructor() { }
+  logedUser: User = null;
 
-  ngOnInit() {
+  constructor(
+    private _sharedService: SharedService,
+  ) {
+    _sharedService.changeEmitted$.subscribe(
+      user => {
+        this.logedUser = user;
+      });
   }
 
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
+  ngOnInit() {
   }
 
 }

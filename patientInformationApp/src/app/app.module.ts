@@ -13,6 +13,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './error/error.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { UserComponent } from './user/user.component';
+import { SharedService } from './shared.service';
+
 
 @NgModule({
   declarations: [
@@ -21,18 +28,26 @@ import { LayoutComponent } from './layout/layout.component';
     HomeComponent,
     CreateComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent,
+    ErrorComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-	  Ng2SmartTableModule
-   ,HttpClientModule,
-   NgbModule,
-   BrowserAnimationsModule,
-   MaterialModule
+    Ng2SmartTableModule,
+    HttpClientModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    FlexLayoutModule
   ],
-  providers: [TableService],
+  providers: [
+    TableService,
+    SharedService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

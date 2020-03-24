@@ -1,24 +1,17 @@
-<mat-toolbar color="primary" class="navbar">
-        <!--
-        <div fxHide.gt-xs>
-            <button mat-icon-button (click)="onToggleSidenav()">
-                <mat-icon>menu</mat-icon>
-            </button>
-        </div>-->
-        <div>PatientInformationApp</div>
-        <div>
-                <span><a routerLink="/home">Home</a></span>
-                <span><a routerLink="/table">GetDetails</a></span>
-        </div>
-        <!--
-        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>-->
-            <!--<ul fxLayout fxLayoutGap="15px" class="navigation-items">-->
-               <!-- <li>
-                    <a routerLink="/owner/owners">Owner Actions</a>
-                </li>
-                <li>
-                    <a routerLink="/account">Account Actions</a>
-                </li>-->
-            <!--</ul>
-        </div>-->
+<mat-toolbar color="primary" class="navbar" >
+    <!--
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>-->
+    <div>PatientInformationApp</div>
+    <div>
+        <ng-container *ngIf="logedUser != null">
+            <!--<a  mat-button  routerLink="/login" >Login</a>-->
+            <a mat-button routerLink="/home">Home</a>
+            <!--<a  mat-button  routerLink="/table">Patients</a>-->
+            <a mat-button routerLink="/login" type="submit">Logout</a>
+        </ng-container>
+    </div>
 </mat-toolbar>
