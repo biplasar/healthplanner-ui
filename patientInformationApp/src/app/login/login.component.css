@@ -1,6 +1,7 @@
-.main-div{
-    padding: 0px;
+mat-form-field{
+    width: 400px;
 }
-.login-form {
-    padding : 20px;
+
+mat-card-title{
+    text-align: center;
 }

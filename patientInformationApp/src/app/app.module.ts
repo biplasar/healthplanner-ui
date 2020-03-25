@@ -1,25 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Ng2SmartTableModule } from 'ng2-smart-table'; 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TableComponent } from './table/table.component';
-import { TableService } from './table/table.service';
-import { HomeComponent } from './home/home.component';
-import { CreateComponent } from './create/create.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { AppComponent } from './app.component';
+import { TableComponent } from './table/table.component';
+import { HomeComponent } from './home/home.component';
+import { CreateComponent } from './create/create.component';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
 import { ErrorComponent } from './error/error.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { UserComponent } from './user/user.component';
-import { SharedService } from './shared.service';
+import { DialogComponent } from './dialogs/dialog.component';
 import { SidenavListComponent } from './sidenav-list/sidenav-list.component'
+
+import { TableService } from './table/table.service';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { SidenavListComponent } from './sidenav-list/sidenav-list.component'
     LoginComponent,
     ErrorComponent,
     UserComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -43,12 +47,14 @@ import { SidenavListComponent } from './sidenav-list/sidenav-list.component'
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule
   ],
   providers: [
     TableService,
     SharedService,
   ],
+  entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

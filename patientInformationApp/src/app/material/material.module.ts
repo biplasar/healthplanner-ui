@@ -1,20 +1,58 @@
 import { NgModule } from '@angular/core';
-import {MatToolbarModule,MatSidenavModule,MatMenuModule,MatButtonModule,MatIconModule,
-  MatTabsModule,MatCardModule,MatFormFieldModule,MatInputModule,MatTableModule, MatSortModule,
-  MatListModule,MatPaginatorModule, MatProgressBarModule, MatCheckboxModule,MatSelectModule,
-  MatProgressSpinnerModule, MatExpansionModule, MatDatepickerModule, MatNativeDateModule , 
-  MatDialogModule} from '@angular/material'
-
-const MaterialComponents = [MatTabsModule,MatToolbarModule, MatSidenavModule,MatMenuModule,
-          MatButtonModule,MatIconModule,MatToolbarModule,MatTabsModule,MatCardModule,
-          MatFormFieldModule,MatInputModule,MatTableModule, MatSortModule,MatDialogModule,
-          MatListModule,MatPaginatorModule, MatProgressBarModule, MatCheckboxModule,MatSelectModule,
-          MatProgressSpinnerModule, MatExpansionModule, MatDatepickerModule, MatNativeDateModule ]
+import { CommonModule } from '@angular/common';
+import { MatTabsModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatMenuModule,
+         MatTableModule, MatSortModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatProgressBarModule, MatCheckboxModule,
+         MatProgressSpinnerModule, MatCardModule, MatSelectModule, MatExpansionModule, MatDatepickerModule, MatNativeDateModule , 
+         MatDialogModule} from '@angular/material';
 
 @NgModule({
-  
-  imports: [MaterialComponents],
-  exports: [MaterialComponents]   
-  
+  imports: [
+    MatDialogModule,
+    MatDatepickerModule, 
+    MatNativeDateModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatCheckboxModule,
+    MatProgressBarModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatTableModule,
+    MatMenuModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    CommonModule,
+    MatTabsModule,
+    MatSidenavModule
+  ],
+  exports: [
+    MatDialogModule,
+    MatDatepickerModule, 
+    MatNativeDateModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatCheckboxModule,
+    MatProgressBarModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSortModule,
+    MatTableModule,
+    MatMenuModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatSidenavModule
+  ],
+  declarations: []
 })
 export class MaterialModule { }
