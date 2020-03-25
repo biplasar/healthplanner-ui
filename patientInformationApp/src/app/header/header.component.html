@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="navbar">
     <mat-toolbar-row>
-        <button mat-icon-button (click)="onToggleSidenav()">
+        <button mat-icon-button (click)="onToggleSidenav()" *ngIf="logedUser != null">
             <mat-icon>menu</mat-icon>
         </button>
         &nbsp;
