@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       height: '200px',
       width: '400px',
       disableClose: true,
+      panelClass: 'custom-modalbox',
       data: {}
     }
   }
