@@ -6,7 +6,7 @@ export class Table {
     id: String;
     patientName:  PatientName;
     postalAddress: PostalAddress;
-    dateOfBirth: String;
+    dateOfBirth: Date;
     mailId : String;
     phone:String;
     maritalStatus:String;

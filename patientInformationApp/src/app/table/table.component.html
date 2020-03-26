@@ -55,8 +55,8 @@
     
     <ng-container matColumnDef="details">
         <th mat-header-cell *matHeaderCellDef width="100px">Details</th>
-        <td mat-cell *matCellDef="let element">
-            <button mat-icon-button color="primary" (click)="redirectToDetails(element.id)">
+        <td mat-cell *matCellDef="let patient">
+            <button mat-icon-button color="primary" (click)="redirectToDetails(patient.id)">
                 <mat-icon class="mat-18">reorder</mat-icon>
             </button>
         </td>
