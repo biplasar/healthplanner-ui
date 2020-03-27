@@ -7,6 +7,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { User } from './user';
+import { HeaderComponent } from '../header/header.component';
 import { SharedService } from '../shared.service';
 import { DialogComponent } from '../dialogs/dialog.component';
 import { ErrorHandlerService } from '../dialogs/error-handler.service';

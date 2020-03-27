@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatTabsModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatMenuModule,
          MatTableModule, MatSortModule, MatFormFieldModule, MatInputModule, MatPaginatorModule, MatProgressBarModule, MatCheckboxModule,
          MatProgressSpinnerModule, MatCardModule, MatSelectModule, MatExpansionModule, MatDatepickerModule, MatNativeDateModule , 
-         MatDialogModule} from '@angular/material';
+         MatDialogModule,MatRadioModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -28,7 +28,8 @@ import { MatTabsModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatBu
     MatToolbarModule,
     CommonModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+	MatRadioModule
   ],
   exports: [
     MatDialogModule,
@@ -51,7 +52,8 @@ import { MatTabsModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatBu
     MatIconModule,
     MatToolbarModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+	MatRadioModule
   ],
   declarations: []
 })
